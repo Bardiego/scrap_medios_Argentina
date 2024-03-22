@@ -17,6 +17,7 @@ Estas son distintos scripts para scrapear medios de noticias de Argentina utiliz
 
 *  Python
 *  Python Libraries: [`bs4`](https://pypi.org/project/bs4/), [`datetime`](https://pypi.org/project/DateTime/), [`pandas`](https://pandas.pydata.org/docs/getting_started/install.html), [`selenium`](https://pypi.org/project/selenium/), [`pytz`](https://pypi.org/project/pytz/), `re`, `unicodedata`
+*  WebDriver
 
 ## **Cómo usar**
 
@@ -25,4 +26,4 @@ Cada código se ejecuta y crea un archivo _nombremedio_fecha_hora.csv_ con el no
 ## **Output**
 
 Cada archivo generado contiene la fecha, hora, texto de la noticia, identificador único (en su mayoría el link o un fragmento del mismo) y lista de citas (frases atribuidas a individuos entre comillas) de todas las noticias  de la _homepage_ del medio.
-![image](https://github.com/Bardiego/scrap_medios_Argentina/assets/42683164/81c6fda1-ee0c-4fda-8394-14d90781ed01)
+![image](https://github.com/Bardiego/scrap_medios_Argentina/assets/42683164/4c646163-f68a-4ce2-b1e8-95cfa196f773)
