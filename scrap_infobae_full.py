@@ -26,6 +26,7 @@ def scrap_infobae():
     # busca elementos con enlaces
     elements = driver.find_elements_by_xpath("//a[@href]")
     links1 = [l.get_attribute('href') for l in elements]
+    # cierro el WebDriver
     driver.close()
     
     # filtra enlaces cortos como -https://www.infobae.com/economia/-
