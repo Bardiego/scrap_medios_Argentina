@@ -71,7 +71,7 @@ def scrap_clarin():
     
     datehour = datetime.today().strftime('%Y-%m-%d %H:%M')
     
-    path = 'clarin_{}'.format(datehour).replace(' ', '_').replace(':', '')
+    path = 'clarin_{}.csv'.format(datehour).replace(' ', '_').replace(':', '')
     df.to_csv(path)
     
     
