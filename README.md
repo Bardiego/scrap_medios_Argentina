@@ -12,6 +12,7 @@ Estas son distintos scripts para scrapear medios de noticias de Argentina utiliz
 * Crónica
 * La Voz del Interior
 * La Capital
+* El Canciller
 
 ## **Requerimientos**
 
