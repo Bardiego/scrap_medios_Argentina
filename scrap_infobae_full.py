@@ -43,13 +43,14 @@ def scrap_infobae():
     # intenta iterar sobre cada enlace
     for link in links:
         try:
-            # request sobre el enlace para obtener su html y luego parsearlo con BeautifulSoup
+            # requests_retry_session se utiliza en caso de necesitarse una retry al sitio y setear algunos parámetros útiles
             response_p = requests_retry_session().get(link, 
                                                       verify = False, 
                                                       timeout=30, 
                                                       headers = {"User-Agent":'Mozilla/5.0'})
+            # html del sitio
             html_p = response_p.text
-            # puede ser con html5lib, html.parser
+            # luego se parsea con BeautifulSoup, puede ser con html5lib, html.parser
             parser = BeautifulSoup(html_p, 'html5lib')
 
             # string de la fecha a partir del tag span con clase 'sharebar-article-date', luego se reemplaza '.' por ''
@@ -90,7 +91,7 @@ def scrap_infobae():
     datehour = datetime.today().strftime('%Y-%m-%d %H:%M')
     # la ruta contiene el nombre del medio junto con la fecha y hora de ejecución del código
     path = 'infobae_{}.csv'.format(datehour).replace(' ', '_').replace(':', '')
-    # se guarda el .csv
+    # finalmente se guarda el .csv
     df.to_csv(path)
     
     
