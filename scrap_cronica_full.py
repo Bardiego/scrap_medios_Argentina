@@ -69,7 +69,7 @@ def scrap_cronica():
     df = df.drop_duplicates(subset='idnota')
     
     datehour = datetime.today().strftime('%Y-%m-%d %H:%M')
-    path = 'cronica_{}'.format(datehour).replace(' ', '_').replace(':', '')
+    path = 'cronica_{}.csv'.format(datehour).replace(' ', '_').replace(':', '')
     df.to_csv(path)
     
     

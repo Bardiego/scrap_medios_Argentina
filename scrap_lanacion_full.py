@@ -63,7 +63,7 @@ def scrap_lanacion():
     df = df.drop_duplicates(subset='idnota')
     
     datehour = datetime.today().strftime('%Y-%m-%d %H:%M')
-    path = 'lanacion_{}'.format(datehour).replace(' ', '_').replace(':', '')
+    path = 'lanacion_{}.csv'.format(datehour).replace(' ', '_').replace(':', '')
     df.to_csv(path)
     
     

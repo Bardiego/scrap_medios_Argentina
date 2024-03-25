@@ -68,7 +68,7 @@ def scrap_lavozcba():
     df = df.drop_duplicates(subset='idnota')
     
     datehour = datetime.today().strftime('%Y-%m-%d %H:%M')
-    path = 'lavozcba_{}'.format(datehour).replace(' ', '_').replace(':', '')
+    path = 'lavozcba_{}.csv'.format(datehour).replace(' ', '_').replace(':', '')
     df.to_csv(path)
     
     

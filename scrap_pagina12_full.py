@@ -71,7 +71,7 @@ def scrap_pagina12():
     df = df.drop_duplicates(subset='idnota')
     
     datehour = datetime.today().strftime('%Y-%m-%d %H:%M')
-    path = 'pagina12_{}'.format(datehour).replace(' ', '_').replace(':', '')
+    path = 'pagina12_{}.csv'.format(datehour).replace(' ', '_').replace(':', '')
     df.to_csv(path)
     
     

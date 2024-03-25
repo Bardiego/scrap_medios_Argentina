@@ -69,7 +69,7 @@ def scrap_perfil():
     
     datehour = datetime.today().strftime('%Y-%m-%d %H:%M')
     
-    path = 'perfil_{}'.format(datehour).replace(' ', '_').replace(':', '')
+    path = 'perfil_{}.csv'.format(datehour).replace(' ', '_').replace(':', '')
     df.to_csv(path)
     
     

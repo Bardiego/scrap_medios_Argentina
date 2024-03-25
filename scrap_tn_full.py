@@ -61,7 +61,7 @@ def scrap_tn():
     df = df.drop_duplicates(subset='idnota')
     
     datehour = datetime.today().strftime('%Y-%m-%d %H:%M')
-    path = 'tn_{}'.format(datehour).replace(' ', '_').replace(':', '')
+    path = 'tn_{}.csv'.format(datehour).replace(' ', '_').replace(':', '')
     df.to_csv(path)
     
     

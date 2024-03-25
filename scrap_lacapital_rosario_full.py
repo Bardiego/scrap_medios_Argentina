@@ -68,7 +68,7 @@ def scrap_lacapitalrosario():
     df = df.drop_duplicates(subset='idnota')
     
     datehour = datetime.today().strftime('%Y-%m-%d %H:%M')
-    path = 'lacapitalrosario_{}'.format(datehour).replace(' ', '_').replace(':', '')
+    path = 'lacapitalrosario_{}.csv'.format(datehour).replace(' ', '_').replace(':', '')
     df.to_csv(path)
     
     

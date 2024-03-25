@@ -68,7 +68,7 @@ def scrap_infobae():
     df = df.drop_duplicates(subset='idnota')
     
     datehour = datetime.today().strftime('%Y-%m-%d %H:%M')
-    path = 'infobae_{}'.format(datehour).replace(' ', '_').replace(':', '')
+    path = 'infobae_{}.csv'.format(datehour).replace(' ', '_').replace(':', '')
     df.to_csv(path)
     
     
